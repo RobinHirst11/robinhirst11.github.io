@@ -1,4 +1,4 @@
-:root {
+html:root {
   --background: 36 39% 88%;
   --foreground: 36 45% 15%;
   --primary: 36 45% 70%;
@@ -32,7 +32,12 @@ body {
   color: hsl(var(--foreground));
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'DM Sans', sans-serif;
 }
 
@@ -62,20 +67,6 @@ nav a:hover {
   color: hsl(var(--primary));
 }
 
-button {
-  background-color: hsl(var(--background));
-  border: 1px solid hsl(var(--border));
-  border-radius: 0.375rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-button:hover {
-  background-color: hsl(var(--accent));
-  color: hsl(var(--accent-foreground));
-}
 
 main {
   flex: 1;
@@ -98,7 +89,7 @@ section {
 }
 
 .grid a {
-  grid-row: span 1; 
+  grid-row: span 1;
 }
 
 .grid a img {
@@ -106,10 +97,6 @@ section {
   height: 100%;
   object-fit: cover;
 }
-
-.landscape {
-  grid-row: span 2;
-} 
 
 footer {
   display: none;
@@ -141,10 +128,7 @@ footer {
   display: none;
 }
 
-.mobile-menu {
-  display: none; 
-}
-
+/* about and contact aren't centered */
 .about-section {
   display: flex;
   flex-direction: column;
@@ -157,6 +141,28 @@ footer {
   text-align: center;
   width: 100%;
 }
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  width: 95%;
+  margin: 0 auto;
+  gap: 0px;
+}
+
+/* lets add a seperate div for the top margin (the top) */
+.grid-item {
+  width: calc(25% - 10px);
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 .profile-picture {
   width: 150px;
